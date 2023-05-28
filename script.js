@@ -47,6 +47,8 @@ buttons.forEach(button => {
             display.textContent = '0';
             set = false;
             operating = false;
+            n1 = undefined;
+            operator = undefined;
         })
     }
     else if (button.textContent == '←'){
@@ -99,9 +101,12 @@ buttons.forEach(button => {
     else if (button.classList.contains('op')){
         if (button.textContent == '='){
             button.addEventListener('click', ()=> {
-                display.textContent = operate(operator,n1,display.textContent)
-                operating = false;
-                set = false;
+                if (operating) {
+                    display.textContent = operate(operator,n1,display.textContent)
+                    operating = false;
+                    set = false;
+                }
+                
             })
         }
         else {

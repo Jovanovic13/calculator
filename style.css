@@ -17,6 +17,7 @@ body {
     text-align: right;
     border-radius: 7px;
     border: 2px solid;
+    overflow: hidden;
 }
 
 #buttons {
