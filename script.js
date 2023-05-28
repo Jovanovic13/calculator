@@ -37,7 +37,6 @@ let operator;
 let n2;
 
 const display = document.querySelector('#display')
-let doing = false;
 let operating = false;
 let set = false;
 let buttons = document.querySelectorAll('.button')
@@ -106,7 +105,6 @@ buttons.forEach(button => {
                     operating = false;
                     set = false;
                 }
-                
             })
         }
         else {
@@ -117,7 +115,6 @@ buttons.forEach(button => {
                 }
                 operating = true;
                 operator = button.textContent;
-                console.log(operator)
             })
         }
     }
