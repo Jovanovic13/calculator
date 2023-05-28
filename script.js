@@ -39,6 +39,7 @@ let n2;
 const display = document.querySelector('#display')
 let operating = false;
 let set = false;
+let doing = false;
 let buttons = document.querySelectorAll('.button')
 buttons.forEach(button => {
     if (button.textContent == 'C'){
@@ -93,10 +94,10 @@ buttons.forEach(button => {
                     display.textContent = '';
                 }
                 display.textContent += button.textContent;
-                console.log(n1, operator)
             }
         })
     }
+    //JEDNAKOTO PRAVI PROBLEM(maybe)-ili ono i/ili celti op
     else if (button.classList.contains('op')){
         if (button.textContent == '='){
             button.addEventListener('click', ()=> {
@@ -104,6 +105,7 @@ buttons.forEach(button => {
                     display.textContent = operate(operator,n1,display.textContent)
                     operating = false;
                     set = false;
+                    doing = false;
                 }
             })
         }
